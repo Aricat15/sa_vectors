@@ -12,7 +12,7 @@
  *                sorted into ascending order
  * @param N the number of numbers read in.
  */
-void read (std::istream& in, double* numbers, int& N);
+void read (std::istream& in, std::vector<double>& numbers);
 
 
 /**
@@ -21,7 +21,7 @@ void read (std::istream& in, double* numbers, int& N);
  * @param numbers the sequence of numbers
  * @param N the number of numbers in the sequence
  */
-double computeMedian (const double* numbers, int N);
+double computeMedian (const std::vector<double>& numbers);
 
 
 #endif

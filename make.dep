@@ -1,0 +1,4 @@
+median.o: median.cpp computeMedian.h
+unittest.o: unittest.cpp unittest.h
+testMedian.o: testMedian.cpp unittest.h ordering.h computeMedian.h
+computeMedian.o: computeMedian.cpp computeMedian.h ordering.h

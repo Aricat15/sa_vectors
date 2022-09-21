@@ -18,17 +18,16 @@ using namespace std;
  *                sorted into ascending order
  * @param N the number of numbers read in.
  */
-void read (std::istream& in, double* numbers, int& N)
+void read (std::istream& in, vector<double>& numbers)
 {
-    N = 0;
+    
     double d = 0.0;
     while (true)
     {
         in >> d;
         if (d < 0.0) break;
-        numbers[N] = d;
-        ++N;
-        shiftIntoPosition(numbers, numbers+N);
+        numbers.push_back(d);
+        shiftIntoPosition(numbers.begin(),numbers.end());
     }
 }
 
@@ -39,8 +38,9 @@ void read (std::istream& in, double* numbers, int& N)
  * @param numbers the sequence of numbers
  * @param N the number of numbers in the sequence
  */
-double computeMedian (const double* numbers, int N)
+double computeMedian (const vector<double>& numbers)
 {
+    unsigned N = numbers.size();
     if (N % 2 == 0)
     {
         int mid = N / 2;
